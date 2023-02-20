@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="InvioChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="actorsDetail" destination="OdK-Vd-tNr" id="w43-sT-52i"/>
+                <outlet property="boxOfficeDetail" destination="QIF-Di-JLo" id="0s2-d6-uiO"/>
+                <outlet property="countryDetail" destination="2v5-kd-5OD" id="AS1-ge-tJH"/>
+                <outlet property="detailContainerView" destination="77U-n8-6Uk" id="eib-UZ-ESA"/>
+                <outlet property="directorDetail" destination="6hd-Y2-qY4" id="rpr-xs-6Qf"/>
+                <outlet property="durationDetail" destination="6do-Oj-gCr" id="bZg-2c-UTH"/>
+                <outlet property="languageDetail" destination="bSo-fA-b0f" id="w9z-Ik-LDQ"/>
+                <outlet property="moviePoster" destination="fed-Wa-6t7" id="gyH-q6-aUc"/>
+                <outlet property="plotDetail" destination="Yhi-b6-YDK" id="NHg-AA-pMw"/>
+                <outlet property="ratingDetail" destination="mhx-71-ywv" id="G5e-Wm-CEA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="writerDetail" destination="Lr8-16-jAd" id="llq-RQ-hjm"/>
+                <outlet property="yearDetail" destination="RbD-av-Grs" id="HNk-7F-osm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="By0-DE-bvW">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77U-n8-6Uk">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="820"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zt4-lM-ROE">
+                                    <rect key="frame" x="20" y="52" width="353" height="228"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fed-Wa-6t7">
+                                            <rect key="frame" x="0.0" y="0.0" width="157.33333333333334" height="228"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="228" id="cNv-iv-SBK"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="XLP-iw-gJP">
+                                            <rect key="frame" x="217.33333333333334" y="0.0" width="75.666666666666657" height="228"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Tdm-RI-RCc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="38"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6do-Oj-gCr" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="19.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uka-Zc-Cwc" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="24.333333333333343" width="75.666666666666671" height="13.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <color key="textColor" name="softBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fUT-Am-15e">
+                                                    <rect key="frame" x="0.0" y="63" width="75.666666666666671" height="38.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbD-av-Grs" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="19.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUu-z6-iRV" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="24.333333333333343" width="75.666666666666671" height="14.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" name="softBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IR7-w5-ZcG">
+                                                    <rect key="frame" x="0.0" y="126.66666666666664" width="75.666666666666671" height="38.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" showsExpansionTextWhenTruncated="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSo-fA-b0f" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="19"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHs-Ve-0zR" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="24.000000000000028" width="75.666666666666671" height="14.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" name="softBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nwg-71-jYb">
+                                                    <rect key="frame" x="0.0" y="190" width="75.666666666666671" height="38"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhx-71-ywv" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="19"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1r-R4-ZVv" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="24" width="75.666666666666671" height="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" name="softBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="fed-Wa-6t7" secondAttribute="bottom" id="7ax-s0-OcT"/>
+                                        <constraint firstItem="fed-Wa-6t7" firstAttribute="top" secondItem="Zt4-lM-ROE" secondAttribute="top" id="A4v-36-K85"/>
+                                        <constraint firstAttribute="trailing" secondItem="XLP-iw-gJP" secondAttribute="trailing" constant="60" id="G0y-gr-7oq"/>
+                                        <constraint firstItem="fed-Wa-6t7" firstAttribute="leading" secondItem="Zt4-lM-ROE" secondAttribute="leading" id="c3U-uh-bJG"/>
+                                        <constraint firstItem="XLP-iw-gJP" firstAttribute="top" secondItem="Zt4-lM-ROE" secondAttribute="top" id="r31-Wm-jGJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="XLP-iw-gJP" secondAttribute="bottom" id="sKY-N8-4ec"/>
+                                        <constraint firstItem="XLP-iw-gJP" firstAttribute="leading" secondItem="fed-Wa-6t7" secondAttribute="trailing" constant="60" id="uoL-aw-bsL"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BtF-ah-TIR">
+                                    <rect key="frame" x="20" y="312" width="353" height="476"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="a6D-FD-hZu">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="476"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="UVP-0W-bZd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="52.666666666666664"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeW-fb-RsR" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30.666666666666668" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhi-b6-YDK" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="32.333333333333314" width="41.333333333333336" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fWX-QT-LdY">
+                                                    <rect key="frame" x="0.0" y="84.666666666666686" width="353" height="52.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G53-3V-rax" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="63.333333333333336" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hd-Y2-qY4" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="32.333333333333314" width="41.333333333333336" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ffj-TN-5PI">
+                                                    <rect key="frame" x="0.0" y="169.33333333333337" width="353" height="52.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeG-GO-YGj" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="48" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-16-jAd" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="32.333333333333258" width="41.333333333333336" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qcG-Pk-xJZ">
+                                                    <rect key="frame" x="0.0" y="253.99999999999997" width="353" height="52.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vu9-Cu-OP7" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="51" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdK-Vd-tNr" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="32.333333333333371" width="41.333333333333336" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gIZ-xM-I4p">
+                                                    <rect key="frame" x="0.0" y="338.66666666666663" width="353" height="52.666666666666686"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmA-Pw-UND" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="63" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v5-kd-5OD" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="32.333333333333371" width="41.333333333333336" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Jz-7c-C7z">
+                                                    <rect key="frame" x="0.0" y="423.33333333333337" width="353" height="52.666666666666686"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box Office" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zf-g4-rZq" customClass="HeaderLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="81" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIF-Di-JLo" customClass="DetailLabel" customModule="InvioChallenge" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="32.333333333333258" width="41.333333333333336" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="softBlack"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="a6D-FD-hZu" secondAttribute="bottom" id="1P8-29-VKc"/>
+                                        <constraint firstAttribute="trailing" secondItem="a6D-FD-hZu" secondAttribute="trailing" id="8TK-vw-MTF"/>
+                                        <constraint firstItem="a6D-FD-hZu" firstAttribute="leading" secondItem="BtF-ah-TIR" secondAttribute="leading" id="D9v-uX-A0l"/>
+                                        <constraint firstItem="a6D-FD-hZu" firstAttribute="top" secondItem="BtF-ah-TIR" secondAttribute="top" id="SXx-Kv-HHO"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="BtF-ah-TIR" firstAttribute="top" secondItem="Zt4-lM-ROE" secondAttribute="bottom" constant="32" id="5zD-n0-ude"/>
+                                <constraint firstItem="Zt4-lM-ROE" firstAttribute="leading" secondItem="77U-n8-6Uk" secondAttribute="leading" constant="20" id="Ey5-xV-bPK"/>
+                                <constraint firstAttribute="bottom" secondItem="BtF-ah-TIR" secondAttribute="bottom" constant="32" id="MUa-fN-4eC"/>
+                                <constraint firstItem="Zt4-lM-ROE" firstAttribute="top" secondItem="77U-n8-6Uk" secondAttribute="top" constant="52" id="PUw-hO-PFn"/>
+                                <constraint firstAttribute="trailing" secondItem="Zt4-lM-ROE" secondAttribute="trailing" constant="20" id="ZxB-Ov-EhL"/>
+                                <constraint firstItem="BtF-ah-TIR" firstAttribute="leading" secondItem="77U-n8-6Uk" secondAttribute="leading" constant="20" id="qkU-l7-iKK"/>
+                                <constraint firstAttribute="trailing" secondItem="BtF-ah-TIR" secondAttribute="trailing" constant="20" id="zBJ-yQ-7NA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="77U-n8-6Uk" secondAttribute="bottom" id="K2f-vN-FAs"/>
+                        <constraint firstAttribute="trailing" secondItem="77U-n8-6Uk" secondAttribute="trailing" id="PD4-eU-JKD"/>
+                        <constraint firstItem="77U-n8-6Uk" firstAttribute="leading" secondItem="By0-DE-bvW" secondAttribute="leading" id="fYQ-IM-67e"/>
+                        <constraint firstItem="77U-n8-6Uk" firstAttribute="top" secondItem="By0-DE-bvW" secondAttribute="top" id="sc4-nt-Dik"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="By0-DE-bvW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="97K-j1-gLD"/>
+                <constraint firstItem="By0-DE-bvW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="CBT-1Q-kAm"/>
+                <constraint firstItem="77U-n8-6Uk" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.9" priority="250" id="FDM-tz-QDX"/>
+                <constraint firstItem="77U-n8-6Uk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="FL0-wU-7Z2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="By0-DE-bvW" secondAttribute="bottom" id="QeG-vG-n0y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="By0-DE-bvW" secondAttribute="trailing" id="iVh-MC-irU"/>
+                <constraint firstItem="fed-Wa-6t7" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="pOv-1i-zSI"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="softBlack">
+            <color red="0.20000000000000001" green="0.30588235294117649" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="softBlue">
+            <color red="0.39215686274509803" green="0.53333333333333333" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

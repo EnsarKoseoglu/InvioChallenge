@@ -34,7 +34,11 @@ class SplashViewController: BaseViewController {
     }
     
     private func setupUI() {
-        welcomeLabel.text = "Hoş geldin"
+        welcomeLabel.text = "Merhaba"
+        if !viewModel.isInitialLaunch {
+          welcomeLabel.text = "Hoş geldin"
+          viewModel.setInitialLaunch()
+        }
         welcomeLabel.font = UIFont.avenir(.Heavy, size: 36)
         welcomeLabel.textColor = .white
     }

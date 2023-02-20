@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol MovieListCellDelegate: AnyObject {
+  func willSetFavoriteState(_ cell: MovieListTableViewCell)
+}
+
 class MovieListTableViewCell: UITableViewCell {
+
+    weak var delegate: MovieListCellDelegate?
 
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
@@ -27,11 +33,15 @@ class MovieListTableViewCell: UITableViewCell {
         movieYearLabel.text = movie.year
         movieTypeLabel.text = movie.type
         movieImdbLabel.text = "IMDB ID : \(movie.id)"
+        posterImageView.setImage(from: movie.poster, placeholder: Asset.placeholder.image)
+        if UserDefaults.standard.bool(forKey: movie.id) {
+          likeButton.setImage(Asset.like.image, for: .normal)
+        } else {
+          likeButton.setImage(Asset.unlike.image, for: .normal)
+        }
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            self?.likeButton.setImage(UIImage(named: "like-fill"), for: .normal)
-        }
+      self.delegate?.willSetFavoriteState(self)
     }
 }

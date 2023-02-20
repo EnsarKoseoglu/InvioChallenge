@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: SplashViewControllerDelegate {
     func appStart() {
         let movieListVC = MovieListViewController(nibName: MovieListViewController.className, bundle: nil)
-        let viewModel = MovieListViewModelImpl()
+        let viewModel = MovieListViewModelImpl(apiService: MovieService())
         movieListVC.inject(viewModel: viewModel)
         self.window?.rootViewController = movieListVC
     }
